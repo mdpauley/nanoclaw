@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  nanoclaw:
+    build: .
+    container_name: nanoclaw
+    restart: unless-stopped
+    ports:
+      - "3000:3000"   # adjust if your app uses a different port
+    environment:
+      NODE_ENV: production
